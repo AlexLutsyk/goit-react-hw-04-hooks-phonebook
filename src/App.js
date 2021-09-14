@@ -16,9 +16,7 @@ export default function App() {
   const [filter, setFilter] = useState("");
 
   useEffect(() => {
-    const localContacts = window.localStorage.getItem(
-      localStorage.getItem("contacts")
-    );
+    const localContacts = window.localStorage.getItem("contacts");
     const parsedContacts = JSON.parse(localContacts);
     if (parsedContacts) {
       setContacts(parsedContacts);
